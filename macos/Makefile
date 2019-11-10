@@ -15,4 +15,4 @@ release: zip_packages
 PLATFORM=$(shell uname)
 VERSION=$(shell cat version.txt)
 zip_packages:
-	zip -r EvernoteAutomation_$(PLATFORM)_$(VERSION).zip services/*
+	zip -r EvernoteAutomation_$(PLATFORM)_$(VERSION).zip readme.txt services/*
