@@ -12,6 +12,9 @@ from bs4 import BeautifulSoup
 import string
 
 
+from_note = True
+
+
 class EvernoteHtmlFilter(object):
     """A class that implements filtering of Evernote exported note HTML."""
 
@@ -22,11 +25,14 @@ class EvernoteHtmlFilter(object):
         'text-indent', 'font-style', 'word-spacing', 'text-align', 'white-space', 'text-transform', 'font-weight'
     ]
 
-    def __init__(self, html):
+    def __init__(self, html, from_clipboard=False):
         """Return a new EvernoteHtmlFilter instance."""
         self.html = filter(lambda x: x in self.printable, html)
         # parse and extract the note body
-        self.soup = BeautifulSoup(self.html).find('div', id='en-note')
+        if from_clipboard:
+            self.soup = BeautifulSoup(self.html).find('div', {'style': '-en-clipboard:true;'})
+        else:
+            self.soup = BeautifulSoup(self.html).find('div', id='en-note')
 
     def style_element_name(self, style_selement):
         """Return the name of the style element."""
@@ -85,11 +91,19 @@ class EvernoteHtmlFilter(object):
         return str(self.soup)
 
 
-html_content = ""
-for line in sys.stdin:
-    html_content = html_content + line
+def get_html(file=sys.stdin):
+    """Retrieve the HTML content from a file."""
+    html_content = ""
+    for line in file:
+        html_content = html_content + line
+    return html_content
 
-filter = EvernoteHtmlFilter(html_content)
+
+if (from_note):
+    filter = EvernoteHtmlFilter(get_html())
+else:
+    # from clipboard
+    filter = EvernoteHtmlFilter(get_html(open(sys.argv[1])), from_clipboard=True)
 filter.filter(table_style_border=True, table_border_color='gray')
 
 sys.stdout.write(str(filter))

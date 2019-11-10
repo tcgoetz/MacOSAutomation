@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>set html_content to ""tell application "Evernote"	activate	set note_list to selection	set first_note to item 1 of note_list	repeat with the_note in note_list		set html_note_content to HTML content of first_note		set html_content to html_content &amp; html_note_content	end repeatend tell</string>
+					<string>set html_content to ""tell application "Evernote"	activateend telltell application "System Events" to keystroke "c" using {command down}delay 1set html_hex to the clipboard as «class HTML»set temp_path to (path to "temp" from user domain as text) &amp; "temp.html"set temp_file to open for access file temp_path with write permissionset eof of temp_file to 0write html_hex to temp_fileclose access temp_fileget POSIX path of temp_path</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -68,15 +68,15 @@
 				<key>Class Name</key>
 				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>C47D2C55-C39F-45F8-A95D-500C2D245F36</string>
+				<string>2E17BE1A-F777-40D1-B6E9-A3FE6E3A3995</string>
 				<key>Keywords</key>
 				<array>
 					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>D7DE3EE7-50B7-4CAF-BA5D-7018A2A477E8</string>
+				<string>D7B2F35B-94BC-42A0-AB1C-46CCD63440F1</string>
 				<key>UUID</key>
-				<string>33283D96-C226-439A-A74C-776EFBAE62D1</string>
+				<string>128525BC-D7C0-452E-BF99-DC5D24D0F979</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -102,10 +102,12 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>779.500000:548.000000</string>
+				<string>772.000000:548.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -175,7 +177,7 @@ from bs4 import BeautifulSoup
 import string
 
 
-from_note = True
+from_note = False
 
 
 class EvernoteHtmlFilter(object):
@@ -274,7 +276,7 @@ sys.stdout.write(str(filter))
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>shell</key>
 					<string>/usr/bin/python</string>
 					<key>source</key>
@@ -383,7 +385,7 @@ sys.stdout.write(str(filter))
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>779.500000:730.000000</string>
+				<string>772.000000:910.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -464,19 +466,19 @@ sys.stdout.write(str(filter))
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>AF73B778-01E3-46DC-9D55-6E569B0C078B</key>
-		<dict>
-			<key>from</key>
-			<string>33283D96-C226-439A-A74C-776EFBAE62D1 - 33283D96-C226-439A-A74C-776EFBAE62D1</string>
-			<key>to</key>
-			<string>729C27C6-E1DC-43F1-88E8-C91FE7273F53 - 729C27C6-E1DC-43F1-88E8-C91FE7273F53</string>
-		</dict>
-		<key>BB237299-1A41-4AD6-BD84-6F73BC11C0E0</key>
+		<key>7D5AE0FA-BE87-4F44-B04E-67F2B0B538DE</key>
 		<dict>
 			<key>from</key>
 			<string>729C27C6-E1DC-43F1-88E8-C91FE7273F53 - 729C27C6-E1DC-43F1-88E8-C91FE7273F53</string>
 			<key>to</key>
 			<string>8C29D10B-C909-405E-84CF-4D8A27656561 - 8C29D10B-C909-405E-84CF-4D8A27656561</string>
+		</dict>
+		<key>AE9B3AEB-43C8-4E12-A307-BCBD915D50DD</key>
+		<dict>
+			<key>from</key>
+			<string>128525BC-D7C0-452E-BF99-DC5D24D0F979 - 128525BC-D7C0-452E-BF99-DC5D24D0F979</string>
+			<key>to</key>
+			<string>729C27C6-E1DC-43F1-88E8-C91FE7273F53 - 729C27C6-E1DC-43F1-88E8-C91FE7273F53</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
