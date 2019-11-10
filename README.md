@@ -9,4 +9,4 @@ Service extensions that:
 
 ## Installing
 
-Download the release file and install according the the instruction in the release readme.
+[Download the release file](https://github.com/tcgoetz/EvernoteAutomation/releases) and install according the the instruction in the release readme.
