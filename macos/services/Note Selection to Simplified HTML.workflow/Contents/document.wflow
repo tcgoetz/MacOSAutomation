@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>set html_content to ""tell application "Evernote"	activateend telltell application "System Events" to keystroke "c" using {command down}delay 1set html_hex to the clipboard as «class HTML»set temp_path to (path to "temp" from user domain as text) &amp; "temp.html"set temp_file to open for access file temp_path with write permissionset eof of temp_file to 0write html_hex to temp_fileclose access temp_fileget POSIX path of temp_path</string>
+					<string>tell application "Evernote"	activateend telltell application "System Events" to keystroke "c" using {command down}delay 1set html_hex to the clipboard as «class HTML»set temp_path to (path to "temp" from user domain as text) &amp; "temp.html"set temp_file to open for access file temp_path with write permissionset eof of temp_file to 0write html_hex to temp_fileclose access temp_fileget POSIX path of temp_path</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
