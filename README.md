@@ -1,4 +1,4 @@
-# EvernoteAutomation
+# Evernote Automation
 Scripts for automating Evernote.
 
 Issues these scripts adress:
