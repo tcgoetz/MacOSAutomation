@@ -15,3 +15,7 @@ Service extensions that:
 ## Installing
 
 [Download the release file](https://github.com/tcgoetz/EvernoteAutomation/releases) and install according the the instruction in the release readme.
+
+or
+
+Clone the repo and run `make install` in the macos directory.
