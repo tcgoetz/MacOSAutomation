@@ -1,10 +1,12 @@
 
+SCRIPTS_DIR=${HOME}/Library/Scripts/EverNote
 
 deps:
 	pip install --upgrade --requirement scripts/requirements.txt
 
 install: deps
 	cp -R services/*.workflow ~/Library/Services
+	cp "Backup Notes.scpt" ${SCRIPTS_DIR}
 
 clean:
 	rm -f scripts/*.pyc
