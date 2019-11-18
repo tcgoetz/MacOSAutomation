@@ -1,6 +1,6 @@
 # MacOS Automation
 
-![Screen shot of Music Cleanup script](https://raw.githubusercontent.com/tcgoetz/MacOSAutomation/master/ScreenShot_Music_Cleanup.jpg)
+![Screen shot of Music Cleanup script](https://github.com/tcgoetz/MacOSAutomation/raw/master/ScreenShots/ScreenShot_Music_Cleanup.jpg)
 
 ## EverNote
 
