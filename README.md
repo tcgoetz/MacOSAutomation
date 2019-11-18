@@ -14,11 +14,13 @@ Issues these scripts adress:
 
 ## Music
 
+I maintain my music library in [Swinsian](https://swinsian.com/), but need to keep Music.app in synch so that my iPhone and iPad get the right data when synching. I've started expermimenting with synching some data like ratings, skips, and playvounts back to Swinsian so that I can make better playlists.
+
 Manage metadata in Music.app:
 * Cleanup the Music.app metadata:
-** Clear a tracks skips count when the track hasn't been skipped in skips count weeks.
-* Sync metadata from Swinsian to Msuic.app.
-* Synch meatadata from Msuic.app to Swinsian.
+  * Clear a tracks skips count when the track hasn't been skipped in skips count weeks.
+* Sync metadata from Swinsian to Music.app.
+* Synch meatadata from Music.app to Swinsian.
 
 ## Installing
 
