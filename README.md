@@ -1,5 +1,7 @@
 # MacOS Automation
 
+![Screen shot of Music Cleanup script](https://raw.githubusercontent.com/tcgoetz/MacOSAutomation/master/ScreenShot_Music_Cleanup.jpg)
+
 ## EverNote
 
 Scripts for automating Evernote.
