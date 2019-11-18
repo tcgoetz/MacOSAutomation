@@ -19,8 +19,8 @@ I maintain my music library in [Swinsian](https://swinsian.com/), but need to ke
 Manage metadata in Music.app:
 * Cleanup the Music.app metadata:
   * Clear a tracks skips count when the track hasn't been skipped in skips count weeks.
-* Sync metadata from Swinsian to Music.app.
-* Synch metadata from Music.app to Swinsian.
+* Sync recently changed metadata from Swinsian to Music.app.
+* Sync recently changed metadata from Music.app to Swinsian.
 
 ## Installing
 
