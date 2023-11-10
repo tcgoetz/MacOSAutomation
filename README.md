@@ -2,6 +2,20 @@
 
 ![Screen shot of Music Cleanup script](https://github.com/tcgoetz/MacOSAutomation/raw/master/ScreenShots/ScreenShot_Music_Cleanup.jpg)
 
+## ![NoteBooks.app](https://www.notebooksapp.com/)
+
+```
+usage: sync-note.py [-h] [-f FILE] [-d DIR] [-n] [-p] [-i]
+
+options:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Path and name of the note file.
+  -d DIR, --dir DIR     Path and name of a directory containing note files.
+  -n, --note            Write metadata from the note to the plist.
+  -p, --plist           Read metadata from the plist and write to the note.
+  -i, --import          Open a file with NoteBooks.app and then copy the metadata from the note to the plist.
+```
+
 ## EverNote
 
 Scripts for automating Evernote.
